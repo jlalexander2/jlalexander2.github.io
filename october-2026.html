@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 2026 | Development Journal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f1f5ff;
+      line-height: 1.8;
+    }
+
+    header {
+      padding: 22px 7%;
+      border-bottom: 1px solid #28344e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .accent {
+      color: #55e6d1;
+    }
+
+    nav a {
+      color: #b4c2da;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: #55e6d1;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .tag {
+      color: #55e6d1;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 45px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #55e6d1;
+      margin-top: 55px;
+    }
+
+    p {
+      color: #b4c2da;
+      font-size: 17px;
+    }
+
+    .intro {
+      font-size: 19px;
+    }
+
+    .card {
+      background: #151e33;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+      border: 1px solid #28344e;
+    }
+
+    figure {
+      margin: 35px 0;
+    }
+
+    figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #34415b;
+    }
+
+    figcaption {
+      color: #a8b8d1;
+      font-size: 14px;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    ul {
+      color: #b4c2da;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 45px;
+      padding: 13px 25px;
+      background: #55e6d1;
+      color: #0b1020;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #28344e;
+      padding: 25px;
+      color: #a8b8d1;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      header {
+        padding: 20px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">JA<span class="accent">.</span></div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#journal">Journal</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="tag">Development Journal | October 2026</div>
+
+  <h1>Building the Foundation of PhishSense</h1>
+
+  <p>
+    <strong>Author:</strong> Jamie Alexander<br>
+    <strong>Date:</strong> October 25, 2026<br>
+    <strong>Project:</strong> PhishSense – Adaptive Phishing Awareness Training System
+  </p>
+
+  <div class="card">
+    <p class="intro">
+      This month marked the beginning of the development phase of my
+      master's capstone project, PhishSense. The project combines my
+      background in cybersecurity with my ongoing studies in computer
+      science to explore how adaptive learning can improve phishing
+      awareness training.
+    </p>
+
+    <p>
+      My primary focus was transitioning from research and planning
+      into the initial implementation of a functional web application.
+      This included establishing the application's architecture,
+      developing user authentication, creating the learner dashboard,
+      and preparing the foundation for future training functionality.
+    </p>
+  </div>
+
+  <h2>Project Overview</h2>
+
+  <p>
+    PhishSense is a web-based phishing awareness training platform
+    designed to help users recognize suspicious emails through
+    interactive learning scenarios.
+  </p>
+
+  <p>
+    The planned system will adjust training difficulty based on
+    individual performance, allowing users to receive increasingly
+    challenging scenarios as their recognition skills improve.
+    The project will also explore whether adaptive training
+    produces different learning outcomes compared with a
+    fixed-difficulty approach.
+  </p>
+
+  <h2>Features Developed This Month</h2>
+
+  <div class="card">
+
+    <h3>1. Application Architecture and Database</h3>
+
+    <p>
+      I established the initial application structure using Python,
+      Flask, SQLite, and HTML. Flask handles application routing
+      and communication between the user interface and the
+      application's underlying functionality.
+    </p>
+
+    <p>
+      SQLite provides a lightweight relational database for storing
+      application data. Establishing the database and project
+      structure created a foundation for future participant
+      management, training sessions, and performance tracking.
+    </p>
+
+    <h3>2. User Registration and Login</h3>
+
+    <p>
+      I implemented the initial registration and login functionality,
+      allowing users to access the application through individual
+      accounts. This functionality establishes the groundwork
+      for associating future training activity with specific users.
+    </p>
+
+    <h3>3. Learner Dashboard</h3>
+
+    <p>
+      I developed a learner dashboard that provides navigation
+      to training scenarios, results, and training history.
+      The dashboard serves as the central interface users will
+      interact with after logging into PhishSense.
+    </p>
+
+  </div>
+
+  <h2>Development Screenshots</h2>
+
+  <p>
+    The following screenshots document the current application
+    interface and demonstrate the progress made during the
+    initial development phase.
+  </p>
+
+  <figure>
+    <img
+      src="images/PhishSense-Dashboard.png"
+      alt="PhishSense learner dashboard showing training, results, and history navigation"
+    >
+
+    <figcaption>
+      Figure 1. PhishSense learner dashboard displaying the
+      main navigation options for training, results, and history.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img
+      src="images/PhishSense-TrainingTab.png"
+      alt="PhishSense training page displaying a placeholder for future scenarios"
+    >
+
+    <figcaption>
+      Figure 2. Initial training page prepared for the
+      implementation of interactive phishing scenarios.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img
+      src="images/PhishSense-ResultsTab.png"
+      alt="PhishSense results page displaying a placeholder for future performance reporting"
+    >
+
+    <figcaption>
+      Figure 3. Results page prepared for future
+      performance tracking and feedback.
+    </figcaption>
+  </figure>
+
+  <h2>Development Tools and Resources</h2>
+
+  <p>
+    Throughout this month, I used several technologies and
+    development tools to establish the foundation of PhishSense.
+  </p>
+
+  <ul>
+    <li><strong>Python:</strong> Primary programming language.</li>
+    <li><strong>Flask:</strong> Web application framework and routing.</li>
+    <li><strong>SQLite:</strong> Relational database management.</li>
+    <li><strong>HTML and CSS:</strong> User interface structure and styling.</li>
+    <li><strong>Visual Studio Code:</strong> Application development and testing.</li>
+    <li><strong>Git and GitHub:</strong> Version control and project documentation.</li>
+  </ul>
+
+  <h2>Challenges Encountered</h2>
+
+  <p>
+    One of the main challenges this month was transitioning from
+    the planning and research stages into actual software development.
+    While the initial application structure was relatively
+    straightforward, determining how to organize the system
+    to support future adaptive learning functionality required
+    additional consideration.
+  </p>
+
+  <p>
+    Another challenge involved managing the project's scope.
+    PhishSense is intended to include adaptive training,
+    performance tracking, and interactive phishing scenarios.
+    Attempting to implement every feature simultaneously
+    would make development and testing more difficult.
+  </p>
+
+  <p>
+    To address this, I adopted an incremental development
+    approach. I focused first on establishing the application
+    structure, authentication, navigation, and database before
+    implementing more advanced training functionality.
+  </p>
+
+  <h2>Monthly Retrospective</h2>
+
+  <div class="card">
+
+    <h3>What Went Well?</h3>
+
+    <p>
+      I successfully moved PhishSense from a conceptual research
+      project into an initial working web application. Completing
+      the registration and login functionality, establishing the
+      database, and creating the learner dashboard provided
+      a foundation for future development.
+    </p>
+
+    <p>
+      I also made progress in defining the project's research
+      methodology and preparing documentation for the
+      proposed evaluation of adaptive phishing training.
+    </p>
+
+    <h3>What Could Have Gone Better?</h3>
+
+    <p>
+      Balancing project development with other academic,
+      professional, and personal responsibilities made
+      time management challenging. Some tasks required
+      more time than initially anticipated, particularly
+      when translating design concepts into functional
+      application components.
+    </p>
+
+    <p>
+      Additionally, several planned features remain in
+      development. The training, results, and history pages
+      currently serve as placeholders rather than
+      fully implemented components.
+    </p>
+
+    <h3>How Will I Improve Moving Forward?</h3>
+
+    <p>
+      Moving forward, I plan to divide development into
+      smaller, measurable tasks and prioritize features
+      necessary for the research evaluation.
+    </p>
+
+    <p>
+      My next steps include implementing simulated phishing
+      scenarios, developing the performance-based difficulty
+      adjustment system, and preparing the application
+      for future usability testing.
+    </p>
+
+    <p>
+      I will also continue using advisor feedback and
+      version control to document progress and refine
+      the application's design.
+    </p>
+
+  </div>
+
+  <h2>Looking Ahead</h2>
+
+  <p>
+    October established the technical foundation of PhishSense.
+    Although significant development remains, the application
+    now has an initial structure that can support additional
+    functionality in upcoming milestones.
+  </p>
+
+  <p>
+    My next development priorities are implementing the
+    interactive phishing training experience, recording
+    user responses, and creating the logic required to
+    support adaptive difficulty.
+  </p>
+
+  <p>
+    As development progresses, I will continue documenting
+    technical decisions, challenges, and improvements
+    through this professional portfolio.
+  </p>
+
+  <a class="back-button" href="index.html">
+    ← Back to Portfolio
+  </a>
+
+</main>
+
+<footer>
+  © 2026 Jamie Alexander | Professional Development Portfolio
+</footer>
+
+</body>
+</html>
