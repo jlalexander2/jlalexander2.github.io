@@ -1,445 +1,491 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional cybersecurity and software development portfolio.">
-  <title>Jamie Alexander | Cybersecurity & Software Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jamie Alexander's professional portfolio showcasing cybersecurity, computer science, software development, and the PhishSense capstone project.">
 
-  <style>
-    :root {
-      --background: #0b1020;
-      --surface: #141c32;
-      --surface-light: #1c2741;
-      --text: #f2f5ff;
-      --muted: #a9b6d0;
-      --teal: #5eead4;
-      --purple: #b4a0ff;
-      --border: #2a3550;
-    }
+    <title>Jamie Alexander | Cybersecurity & Computer Science</title>
 
-    * {
-      box-sizing: border-box;
-    }
+    <style>
+        :root {
+            --background: #0b1020;
+            --card: #151d34;
+            --text: #f0f2ff;
+            --muted: #a9b6cf;
+            --accent: #55e6d1;
+            --border: #2c3956;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-      margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    a {
-      color: var(--teal);
-      text-decoration: none;
-    }
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        a {
+            color: var(--accent);
+        }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(11, 16, 32, 0.96);
-      border-bottom: 1px solid var(--border);
-    }
+        header {
+            padding: 20px 6%;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-    nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 18px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
 
-    .logo {
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--text);
-    }
+        .logo span {
+            color: var(--accent);
+        }
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
 
-    .nav-links a {
-      color: var(--muted);
-      font-size: 14px;
-    }
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 16px;
+        }
 
-    .nav-links a:hover {
-      color: var(--teal);
-    }
+        nav a:hover {
+            color: var(--accent);
+        }
 
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 24px;
-    }
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 25px;
+        }
 
-    section {
-      padding: 75px 0;
-      border-bottom: 1px solid var(--border);
-      scroll-margin-top: 80px;
-    }
+        section {
+            padding: 85px 0;
+            border-bottom: 1px solid var(--border);
+        }
 
-    .hero {
-      padding: 110px 0 95px;
-    }
+        .hero {
+            padding: 110px 0;
+        }
 
-    .eyebrow {
-      color: var(--teal);
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 13px;
-    }
+        .eyebrow {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 14px;
+        }
 
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.12;
-      margin: 15px 0;
-    }
+        h1 {
+            font-size: clamp(45px, 7vw, 75px);
+            line-height: 1.2;
+            margin: 25px 0;
+        }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 25px;
-    }
+        h1 span {
+            color: var(--accent);
+        }
 
-    h3 {
-      margin-top: 0;
-      color: var(--text);
-    }
+        h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
 
-    p {
-      color: var(--muted);
-    }
+        h3 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
 
-    .highlight {
-      color: var(--teal);
-    }
+        p {
+            color: var(--muted);
+            font-size: 18px;
+        }
 
-    .hero-description {
-      max-width: 720px;
-      font-size: 19px;
-    }
+        .hero p {
+            max-width: 850px;
+            font-size: 21px;
+        }
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 30px;
-    }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 35px;
+        }
 
-    .button {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 8px;
-      background: var(--teal);
-      color: #081320;
-      font-weight: 700;
-    }
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: var(--accent);
+            color: var(--background);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .button.secondary {
-      background: transparent;
-      color: var(--teal);
-      border: 1px solid var(--teal);
-    }
+        .button-outline {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+        .button:hover {
+            opacity: 0.85;
+        }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 25px;
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
 
-    .card:hover {
-      border-color: var(--purple);
-    }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+        }
 
-    .tag {
-      display: inline-block;
-      padding: 6px 12px;
-      margin: 5px 5px 5px 0;
-      border-radius: 20px;
-      background: var(--surface-light);
-      color: var(--teal);
-      font-size: 13px;
-    }
+        .card p {
+            margin-bottom: 20px;
+        }
 
-    .project-label {
-      color: var(--purple);
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 5px 5px 5px 0;
+            background: #202b47;
+            border-radius: 6px;
+            color: var(--accent);
+            font-size: 14px;
+        }
 
-    .journal-date {
-      color: var(--purple);
-      font-size: 14px;
-    }
+        .journal-date {
+            color: #b7a6ff;
+            font-size: 16px;
+            font-weight: bold;
+        }
 
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      color: var(--muted);
-      font-size: 14px;
-    }
+        .project-image {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-top: 20px;
+        }
 
-    @media (max-width: 600px) {
-      .hero {
-        padding: 70px 0;
-      }
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            color: var(--muted);
+        }
 
-      section {
-        padding: 55px 0;
-      }
+        @media (max-width: 600px) {
+            section {
+                padding: 60px 0;
+            }
 
-      nav {
-        justify-content: center;
-      }
-    }
-  </style>
+            .hero {
+                padding: 75px 0;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="#home" class="logo">JA<span class="highlight">.</span></a>
+<header>
+    <div class="logo">JA<span>.</span></div>
 
-      <div class="nav-links">
+    <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#journal">Journal</a>
         <a href="#contact">Contact</a>
-      </div>
     </nav>
-  </header>
+</header>
 
-  <main>
+<main>
 
-    <!-- HOME -->
-    <section id="home" class="hero">
-      <div class="eyebrow">
-        Cybersecurity • Computer Science • Software Development
-      </div>
+    <section class="hero">
 
-      <h1>
-        Hi, I'm Jamie<span class="highlight">.</span>
-      </h1>
+        <div class="eyebrow">
+            Cybersecurity • Computer Science • Software Development
+        </div>
 
-      <p class="hero-description">
-        I'm a cybersecurity graduate and master's student in
-        Computer Science with a passion for building practical,
-        secure, and user-focused technology solutions.
-      </p>
+        <h1>Hi, I'm Jamie<span>.</span></h1>
 
-      <p class="hero-description">
-        My work brings together cybersecurity principles,
-        software development, research, and problem-solving.
-        Explore my projects and follow my development journey.
-      </p>
+        <p>
+            I'm a cybersecurity graduate and master's student in Computer
+            Science with a passion for building practical, secure, and
+            user-focused technology solutions.
+        </p>
 
-      <div class="buttons">
-        <a class="button" href="#projects">Explore My Projects</a>
-        <a class="button secondary" href="#journal">
-          Development Journal
-        </a>
-      </div>
+        <p>
+            My work brings together cybersecurity principles, software
+            development, research, and problem-solving. Explore my projects
+            and follow my development journey.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="button">
+                Explore My Projects
+            </a>
+
+            <a href="#journal" class="button button-outline">
+                Development Journal
+            </a>
+        </div>
+
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
-      <h2>About Me</h2>
 
-      <p>
-        My educational background includes an Associate degree
-        in Information Technology and a Bachelor's degree in
-        Cybersecurity, where I graduated as valedictorian.
-        I am currently pursuing a Master of Science in
-        Computer Science at Full Sail University.
-      </p>
+        <h2>About Me</h2>
 
-      <p>
-        My interests include cybersecurity, secure software
-        development, database systems, and designing technology
-        that helps people make safer decisions online.
-      </p>
+        <p>
+            My educational background includes an Associate degree in
+            Information Technology and a Bachelor's degree in Cybersecurity,
+            where I graduated as valedictorian.
+        </p>
 
-      <p>
-        Through my graduate studies, I am expanding my
-        programming, research, and application development
-        experience while building projects that combine
-        technical functionality with real-world relevance.
-      </p>
+        <p>
+            I am currently pursuing a Master of Science in Computer Science
+            at Full Sail University.
+        </p>
+
+        <p>
+            My interests include cybersecurity awareness, secure software
+            development, web applications, database systems, and applying
+            technology to real-world challenges.
+        </p>
+
+        <p>
+            I enjoy developing projects that combine technical functionality
+            with accessible, user-friendly experiences.
+        </p>
+
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
-      <h2>Technical Skills</h2>
 
-      <div class="grid">
+        <h2>Technical Skills</h2>
 
-        <div class="card">
-          <h3>Cybersecurity</h3>
-          <p>
-            Phishing awareness, security principles,
-            threat identification, and secure application design.
-          </p>
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>Cybersecurity</h3>
+
+                <span class="tag">Phishing Awareness</span>
+                <span class="tag">Security Principles</span>
+                <span class="tag">Threat Identification</span>
+                <span class="tag">Security Research</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Software Development</h3>
+
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Databases & Research</h3>
+
+                <span class="tag">SQLite</span>
+                <span class="tag">Database Design</span>
+                <span class="tag">Research Methods</span>
+                <span class="tag">Technical Documentation</span>
+
+            </div>
+
         </div>
 
-        <div class="card">
-          <h3>Programming & Development</h3>
-          <p>
-            Python, Flask, HTML, CSS, and web application development.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Databases & Tools</h3>
-          <p>
-            SQLite, SQL, Git, GitHub, and Trello.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Research & Design</h3>
-          <p>
-            Software requirements, system design,
-            research methodology, and technical documentation.
-          </p>
-        </div>
-
-      </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects">
-      <h2>Featured Projects</h2>
 
-      <div class="card">
-        <div class="project-label">
-          Graduate Capstone • In Development
+        <h2>Featured Projects</h2>
+
+        <div class="card">
+
+            <div class="eyebrow">
+                Master's Capstone Project
+            </div>
+
+            <h3>PhishSense</h3>
+
+            <p>
+                PhishSense is an adaptive phishing awareness training
+                platform being developed as part of my Master of Science
+                in Computer Science capstone project.
+            </p>
+
+            <p>
+                The system is designed to help users improve their ability
+                to identify suspicious emails through simulated phishing
+                scenarios, interactive training, and performance feedback.
+            </p>
+
+            <p>
+                The planned adaptive training component will adjust
+                scenario difficulty based on learner performance.
+            </p>
+
+            <p>
+                The application uses Python, Flask, and SQLite.
+                Current development includes user registration,
+                authentication, a learner dashboard, and initial
+                application routes.
+            </p>
+
+            <h3>PhishSense Learner Dashboard</h3>
+
+            <img
+                src="images/PhishSense-Dashboard.png"
+                alt="Screenshot of the PhishSense learner dashboard"
+                class="project-image"
+                loading="lazy"
+            >
+
+            <h3>Training Interface</h3>
+
+            <p>
+                The training page currently serves as a placeholder
+                for future interactive phishing scenarios.
+            </p>
+
+            <img
+                src="images/PhishSense-TrainingTab.png"
+                alt="Screenshot of the PhishSense training page"
+                class="project-image"
+                loading="lazy"
+            >
+
+            <h3>Results Interface</h3>
+
+            <p>
+                The results page has been created and will display
+                learner performance once training functionality
+                is implemented.
+            </p>
+
+            <img
+                src="images/PhishSense-ResultsTab.png"
+                alt="Screenshot of the PhishSense results page"
+                class="project-image"
+                loading="lazy"
+            >
+
         </div>
 
-        <h3>PhishSense</h3>
-
-        <p>
-          PhishSense is an adaptive phishing awareness training
-          platform designed to help users recognize suspicious
-          emails and improve their cybersecurity decision-making.
-        </p>
-
-        <p>
-          The project combines simulated email scenarios,
-          performance-based training adjustments, and
-          educational feedback.
-        </p>
-
-        <p>
-          The initial application foundation includes a
-          SQLite database, user registration, authentication,
-          and a learner dashboard.
-        </p>
-
-        <div>
-          <span class="tag">Python</span>
-          <span class="tag">Flask</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">Cybersecurity</span>
-          <span class="tag">Research</span>
-        </div>
-
-        <p>
-          <a href="#journal">Follow the development journey →</a>
-        </p>
-      </div>
     </section>
 
-    <!-- JOURNAL -->
     <section id="journal">
-      <h2>Development Journal</h2>
 
-      <p>
-        A behind-the-scenes look at my capstone development
-        process, technical challenges, lessons learned,
-        and project milestones.
-      </p>
-
-      <div class="card">
-        <div class="journal-date">October 2026</div>
-
-        <h3>
-          Building the Foundation of PhishSense
-        </h3>
+        <h2>Development Journal</h2>
 
         <p>
-          My first development journal entry documents the
-          early stages of PhishSense, including application
-          architecture, database development, authentication,
-          research planning, and lessons learned.
+            A behind-the-scenes look at my capstone development process,
+            technical challenges, lessons learned, and project milestones.
         </p>
 
-        <p>
-          Full journal entry coming soon.
-        </p>
-      </div>
+        <div class="card">
+
+            <div class="journal-date">
+                October 2026
+            </div>
+
+            <h3>Building the Foundation of PhishSense</h3>
+
+            <p>
+                My first development journal entry documents the early
+                stages of PhishSense, including application architecture,
+                database development, authentication, research planning,
+                and lessons learned.
+            </p>
+
+            <p>
+                This entry also highlights the initial learner dashboard,
+                training interface, and results page developed during
+                the early project milestones.
+            </p>
+
+            <a href="october-2026.html" class="button">
+                Read Full October 2026 Journal →
+            </a>
+
+        </div>
+
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
-      <h2>Let's Connect</h2>
 
-      <p>
-        Interested in my projects or professional background?
-        Feel free to explore my GitHub profile or reach out.
-      </p>
+        <h2>Contact</h2>
 
-      <div class="buttons">
-        <a
-          class="button"
-          href="https://github.com/jlalexander2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View GitHub
-        </a>
+        <p>
+            Interested in my projects, technical background, or
+            development journey? Feel free to connect.
+        </p>
 
-        <a
-          class="button secondary"
-          href="mailto:jlalexander2@student.fullsail.edu"
-        >
-          Contact Me
-        </a>
-      </div>
+        <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/jlalexander2"
+               target="_blank"
+               rel="noopener noreferrer">
+                github.com/jlalexander2
+            </a>
+        </p>
+
     </section>
 
-  </main>
+</main>
 
-  <footer>
-    © 2026 Jamie Alexander | Cybersecurity & Software Development
-  </footer>
+
+<footer>
+    © 2026 Jamie Alexander. All rights reserved.
+</footer>
 
 </body>
 </html>
