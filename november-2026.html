@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>November 2026 | PhishSense Development Journal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f1f5ff;
+      line-height: 1.8;
+    }
+
+    header {
+      padding: 22px 7%;
+      border-bottom: 1px solid #28344e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .accent {
+      color: #55e6d1;
+    }
+
+    nav a {
+      color: #b4c2da;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: #55e6d1;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .tag {
+      color: #55e6d1;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 45px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #55e6d1;
+      margin-top: 55px;
+    }
+
+    h3 {
+      color: #f1f5ff;
+    }
+
+    p {
+      color: #b4c2da;
+      font-size: 17px;
+    }
+
+    .intro {
+      font-size: 19px;
+    }
+
+    .card {
+      background: #151e33;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+      border: 1px solid #28344e;
+    }
+
+    figure {
+      margin: 35px 0;
+    }
+
+    figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #34415b;
+    }
+
+    figcaption {
+      color: #a8b8d1;
+      font-size: 14px;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    ul {
+      color: #b4c2da;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 45px;
+      padding: 13px 25px;
+      background: #55e6d1;
+      color: #0b1020;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #28344e;
+      padding: 25px;
+      color: #a8b8d1;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      header {
+        padding: 20px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">JA<span class="accent">.</span></div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#journal">Journal</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="tag">Development Journal | November 2026</div>
+
+  <h1>Testing, Optimizing, and Refining PhishSense</h1>
+
+  <p>
+    <strong>Author:</strong> Jamie Alexander<br>
+    <strong>Date:</strong> November 22, 2026<br>
+    <strong>Project:</strong> PhishSense: Adaptive Phishing Awareness Training System
+  </p>
+
+  <div class="card">
+    <p class="intro">
+      November was a busy and challenging month for my master's
+      capstone project, PhishSense. After establishing the
+      application's foundation in October, my focus shifted
+      toward developing and refining its training functionality,
+      evaluating usability, and examining application performance.
+    </p>
+
+    <p>
+      My primary goal was to make PhishSense more functional,
+      reliable, and user friendly. This involved improving the
+      training experience, collecting feedback from testers,
+      and using actual performance measurements to identify
+      areas for optimization.
+    </p>
+
+    <p>
+      Although balancing development with my personal
+      responsibilities was challenging, I made meaningful
+      progress toward preparing PhishSense for the next
+      phase of my capstone project.
+    </p>
+  </div>
+
+  <h2>Monthly Development Goals</h2>
+
+  <p>
+    My main objective for November was to continue developing
+    PhishSense beyond its initial application structure and
+    evaluate how well the system performed during realistic
+    training workflows.
+  </p>
+
+  <p>
+    I wanted to ensure that participants could navigate
+    the application independently, complete simulated phishing
+    exercises, understand the feedback they received, and
+    review their performance.
+  </p>
+
+  <p>
+    I also wanted to identify technical inefficiencies
+    before moving further into the research phase.
+    Memory consumption became a particular focus because
+    participant training histories will continue growing
+    as more sessions are completed.
+  </p>
+
+  <h2>Features Developed and Refined</h2>
+
+  <div class="card">
+
+    <h3>1. Interactive Phishing Training</h3>
+
+    <p>
+      I continued refining the simulated phishing training
+      experience. PhishSense presents participants with
+      legitimate and phishing emails and asks them to
+      classify each message.
+    </p>
+
+    <p>
+      Participants receive educational feedback explaining
+      the indicators associated with each email. Their
+      responses contribute to performance tracking and
+      help identify areas where additional training
+      may be beneficial.
+    </p>
+
+    <h3>2. Adaptive and Nonadaptive Training</h3>
+
+    <p>
+      PhishSense supports two training conditions.
+      The adaptive condition adjusts difficulty based
+      on participant performance after a block of five
+      responses. The nonadaptive condition follows
+      a predetermined difficulty schedule.
+    </p>
+
+    <p>
+      These conditions support my broader capstone
+      research goal of evaluating whether adaptive
+      training produces different phishing recognition
+      outcomes than a fixed training approach.
+    </p>
+
+    <h3>3. Dashboard and Performance Tracking</h3>
+
+    <p>
+      I continued improving the learner dashboard,
+      which provides access to training activities,
+      results, mistake patterns, and training history.
+    </p>
+
+    <p>
+      The dashboard is an important part of PhishSense
+      because it allows participants to review their
+      progress and better understand their performance
+      across completed training sessions.
+    </p>
+
+    <h3>4. Dashboard Memory Optimization</h3>
+
+    <p>
+      One of the most significant technical improvements
+      this month involved reducing unnecessary memory
+      allocations during dashboard loading.
+    </p>
+
+    <p>
+      The original implementation retrieved complete
+      training histories when calculating dashboard
+      statistics. After profiling the application,
+      I implemented a targeted optimization that
+      retrieves summary statistics and streams
+      response times instead.
+    </p>
+
+    <p>
+      The controlled comparison showed that median
+      incremental dashboard memory allocation decreased
+      from 2.9456 MiB to 0.1139 MiB. This represents
+      a 96.1% reduction in temporary Python memory
+      allocation during the measured dashboard operation.
+    </p>
+
+    <p>
+      The optimization did not establish a reduction
+      in retained memory or improve execution speed.
+      However, it demonstrated how profiling data
+      can guide a focused technical improvement.
+    </p>
+
+  </div>
+
+  <h2>Performance Testing and Results</h2>
+
+  <p>
+    I used Python's built-in tracemalloc profiler
+    to examine memory allocations during representative
+    PhishSense workflows. These included authentication,
+    dashboard access, training sessions, results
+    retrieval, and repeated history reads.
+  </p>
+
+  <p>
+    Testing was conducted in an isolated local
+    environment using Python, Flask, and a
+    PostgreSQL database. Production connections
+    were blocked during the profiling process.
+  </p>
+
+  <p>
+    The original memory measurements showed
+    that Python memory usage increased during
+    application initialization and then remained
+    relatively stable throughout the measured
+    training workflow. No persistent memory
+    leak was established under the tested conditions.
+  </p>
+
+  <figure>
+    <img
+      src="images/november-memory-timeline.png"
+      alt="Baseline Python memory profiling timeline for PhishSense"
+    >
+    <figcaption>
+      Figure 1. Baseline Python memory consumption
+      during the PhishSense application lifecycle.
+    </figcaption>
+  </figure>
+
+  <p>
+    To evaluate the dashboard optimization,
+    I compared the original PhishSense v0.6.0
+    implementation with the optimized version.
+    The measured learner had 101 completed
+    sessions and 1,010 responses.
+  </p>
+
+  <p>
+    The optimization substantially reduced
+    temporary dashboard allocations.
+    However, the profiled dashboard duration
+    increased slightly from 0.597 seconds
+    to 0.675 seconds. These results highlighted
+    the importance of considering both
+    memory efficiency and execution time.
+  </p>
+
+  <figure>
+    <img
+      src="images/november-dashboard-optimization.png"
+      alt="Comparison of dashboard memory allocation before and after optimization"
+    >
+    <figcaption>
+      Figure 2. Dashboard memory allocation
+      before and after optimization, showing
+      a 96.1% reduction in temporary allocation.
+    </figcaption>
+  </figure>
+
+  <p>
+    I also performed regression testing
+    to check that the optimization preserved
+    existing functionality. The validation
+    included 25 targeted regression cases
+    and 105 offline test cases, with some
+    overlap between the two groups.
+  </p>
+
+  <h2>Usability Testing and Feedback</h2>
+
+  <p>
+    Another important goal this month was
+    evaluating how people interacted with
+    PhishSense. Four testers provided structured
+    feedback on the application.
+  </p>
+
+  <p>
+    Their responses helped identify strengths
+    in navigation, independent use, and
+    educational feedback, while highlighting
+    opportunities to improve email realism,
+    instructional clarity, and the overall
+    user experience.
+  </p>
+
+  <p>
+    The usability ratings produced an overall
+    average of 4.20 out of 5. Navigation and
+    independent use both received average
+    ratings of 5.00, while educational feedback
+    received an average of 4.75.
+  </p>
+
+  <p>
+    Email realism received the lowest average
+    rating at 2.75. Testers suggested providing
+    more background information about the
+    fictional Evercrest Group organization
+    and improving the appearance and context
+    of simulated workplace emails.
+  </p>
+
+  <p>
+    Feedback also identified opportunities
+    to make the logout function easier to
+    locate and to provide additional
+    educational interaction within the
+    training experience.
+  </p>
+
+  <p>
+    This preliminary feedback provided
+    useful direction for future development.
+    The broader capstone research evaluation
+    remains separate from these initial
+    usability observations.
+  </p>
+
+  <figure>
+    <img
+      src="images/PhishSense-Dashboard.png"
+      alt="PhishSense learner dashboard interface"
+    >
+    <figcaption>
+      Figure 3. PhishSense learner dashboard,
+      one of the interfaces evaluated during
+      usability testing.
+    </figcaption>
+  </figure>
+
+  <h2>Development Tools and Resources</h2>
+
+  <p>
+    Several technologies and tools supported
+    development and testing throughout November.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Python:</strong>
+      Application development and performance profiling.
+    </li>
+    <li>
+      <strong>Flask:</strong>
+      Web application routing and training workflows.
+    </li>
+    <li>
+      <strong>PostgreSQL and Supabase:</strong>
+      Application data storage and retrieval.
+    </li>
+    <li>
+      <strong>HTML and CSS:</strong>
+      Application interface design and presentation.
+    </li>
+    <li>
+      <strong>Visual Studio Code:</strong>
+      Development, debugging, and testing.
+    </li>
+    <li>
+      <strong>Git and GitHub:</strong>
+      Version control and project documentation.
+    </li>
+    <li>
+      <strong>Python tracemalloc:</strong>
+      Memory allocation profiling and comparison.
+    </li>
+  </ul>
+
+  <h2>Challenges Encountered</h2>
+
+  <p>
+    One technical challenge was determining
+    how to reduce dashboard memory usage
+    without affecting the accuracy of
+    performance statistics or historical
+    training data.
+  </p>
+
+  <p>
+    Addressing this required examining
+    profiling results, identifying unnecessary
+    allocations, implementing a targeted
+    change, and comparing the results
+    against the original application.
+  </p>
+
+  <p>
+    Usability testing also revealed
+    areas that still need attention.
+    Although testers generally found
+    the application easy to navigate,
+    the simulated emails need additional
+    realism and organizational context.
+  </p>
+
+  <p>
+    My biggest challenge, however,
+    was balancing schoolwork and software
+    development with my responsibilities
+    outside of school.
+  </p>
+
+  <p>
+    As a mother of four children with
+    a house full of animals, I often
+    have very little uninterrupted time
+    to dedicate to my capstone project.
+    Between parenting, caring for my
+    animals, working, and managing
+    everyday responsibilities, I have
+    frequently felt exhausted.
+  </p>
+
+  <p>
+    There were days when finding the
+    motivation to sit down and work
+    on PhishSense was difficult,
+    even though completing this
+    project remains important to me.
+  </p>
+
+  <h2>Monthly Retrospective</h2>
+
+  <div class="card">
+
+    <h3>What Went Well?</h3>
+
+    <p>
+      I made significant progress in
+      evaluating and refining PhishSense.
+      Completing memory profiling,
+      implementing a measurable dashboard
+      optimization, and collecting usability
+      feedback gave me a clearer understanding
+      of the application's strengths
+      and weaknesses.
+    </p>
+
+    <p>
+      I am particularly proud that
+      the memory optimization was supported
+      by actual measurements rather than
+      assumptions. Seeing a 96.1%
+      reduction in temporary dashboard
+      allocation demonstrated the value
+      of systematic testing.
+    </p>
+
+    <h3>What Could Have Gone Better?</h3>
+
+    <p>
+      Time management was my biggest
+      struggle this month. I am a mother
+      of four with a house full of animals,
+      and balancing everyone's needs
+      with work and graduate school
+      can be exhausting.
+    </p>
+
+    <p>
+      Some days I simply did not have
+      the energy or motivation to work
+      on my capstone after taking care
+      of everything else.
+    </p>
+
+    <p>
+      I would have liked to spend more
+      uninterrupted time on development,
+      but family obligations often
+      required me to adjust my plans.
+      This sometimes made progress
+      feel slower than I wanted.
+    </p>
+
+    <h3>How Will I Improve Moving Forward?</h3>
+
+    <p>
+      Moving forward, I want to set
+      smaller, more realistic development
+      goals and take better advantage
+      of the time I do have available.
+    </p>
+
+    <p>
+      Instead of expecting myself
+      to complete large tasks in one
+      sitting, I plan to break them
+      into manageable steps that fit
+      around my family and work schedule.
+    </p>
+
+    <p>
+      I also want to continue using
+      performance measurements,
+      usability feedback, and advisor
+      guidance to make informed
+      development decisions.
+    </p>
+
+  </div>
+
+  <h2>Looking Ahead</h2>
+
+  <p>
+    November helped me move PhishSense
+    beyond its initial development
+    stage and toward a more thoroughly
+    evaluated application.
+  </p>
+
+  <p>
+    My next priorities include improving
+    simulated email realism, adding
+    more organizational context,
+    refining navigation, and continuing
+    to evaluate performance as the
+    application grows.
+  </p>
+
+  <p>
+    I also plan to explore safe simulated
+    link inspection and additional
+    training interactions in future
+    development milestones.
+  </p>
+
+  <p>
+    Although this month was exhausting,
+    I am proud of the progress I made.
+    Balancing graduate school with
+    family life is not always easy,
+    but each completed milestone
+    brings me closer to finishing
+    my master's degree and PhishSense.
+  </p>
+
+  <a class="back-button" href="index.html">
+    Back to Portfolio
+  </a>
+
+</main>
+
+<footer>
+  © 2026 Jamie Alexander | Professional Development Portfolio
+</footer>
+
+</body>
+</html>
